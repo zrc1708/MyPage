@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100%;
+}
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+.background {
+  background-image: url(../images/macOS-Big-Sur-Daylight.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.header {
+  position: absolute;
+  width: 100%;
+  height: 6.25rem;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+}
+.header .icon {
+  width: 1.5625rem;
+  height: 1.25rem;
+  background-color: white;
+  box-sizing: border-box;
+  background-clip: content-box;
+  margin-right: 2rem;
+  padding-top: 0.4375rem;
+  padding-bottom: 0.4375rem;
+  border-top: 0.125rem solid white;
+  border-bottom: 0.125rem solid white;
+}
+.title {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title .content {
+  margin-top: -5rem;
+}
+.title .title-content {
+  width: 100%;
+  font-size: 2.1875rem;
+  color: white;
+  text-align: center;
+}
+.title .title-underline {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -2.5rem);
+  width: 5rem;
+  border-bottom: 4px solid white;
+}
+.title .discribe {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+.title .comment {
+  color: rgba(255, 255, 255, 0.6);
+}
+.scrollDown {
+  position: absolute;
+  bottom: 2rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-right: 0.125rem solid white;
+  border-bottom: 0.125rem solid white;
+  transform: rotate(45deg);
+}
+.aboutMe {
+  background-color: white;
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
+}
+.aboutMe .aboutMe-title {
+  font-size: 1.875rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.aboutMe .aboutMe-underline {
+  display: block;
+  width: 2.5rem;
+  height: 0.1875rem;
+  background-color: #38b7ea;
+  margin: 0 auto;
+}
+.aboutMe .aboutMe-cardbox {
+  text-align: center;
+  padding-top: 1rem;
+}
+.aboutMe .aboutMe-card {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.625rem;
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+  color: #646464;
+}
+.aboutMe .aboutMe-content {
+  text-align: center;
+  color: #5a5a5a;
+}
