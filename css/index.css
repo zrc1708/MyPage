@@ -85,27 +85,28 @@ body {
   border-bottom: 0.125rem solid white;
   transform: rotate(45deg);
 }
-.aboutMe {
-  background-color: white;
-  padding-top: 5rem;
-  padding-bottom: 6.25rem;
-}
-.aboutMe .aboutMe-title {
+.me-title {
   font-size: 1.875rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 1rem;
 }
-.aboutMe .aboutMe-underline {
+.me-underline {
   display: block;
   width: 2.5rem;
-  height: 0.1875rem;
+  height: 1.1875rem;
   background-color: #38b7ea;
   margin: 0 auto;
+  padding-bottom: 1rem;
+  background-clip: content-box;
+}
+.aboutMe {
+  background-color: white;
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
 }
 .aboutMe .aboutMe-cardbox {
   text-align: center;
-  padding-top: 1rem;
 }
 .aboutMe .aboutMe-card {
   display: inline-block;
@@ -118,4 +119,37 @@ body {
 .aboutMe .aboutMe-content {
   text-align: center;
   color: #5a5a5a;
+}
+.myWork {
+  background-color: #f5f5f5;
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
+}
+.works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.works .workBox {
+  width: 18.75rem;
+  margin: 0 1rem 2rem 1rem;
+}
+.works .workBox img {
+  width: 100%;
+  height: 9.6875rem;
+  display: block;
+}
+.works .workBox .workBox-content {
+  height: 4.375rem;
+  background-color: white;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+.works .workBox .workBox-content .workBox-content-title {
+  line-height: 0;
+  font-weight: 700;
+}
+.works .workBox .workBox-content .workBox-content-describe {
+  font-size: 0.8rem;
 }
