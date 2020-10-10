@@ -9,10 +9,12 @@
 </head>
 <body>
     <div class="background"></div>
+    <div class="mask"></div>
     <header class="header">
         <div class="icon"></div>
     </header>
     <section class="title">
+        <a id="title" class="point"></a>
         <div class="content">
             <p class="title-content">天下熙熙，皆为利来<br>天下攘攘，皆为利往</p>
             <p class="title-underline"></p>
@@ -20,9 +22,10 @@
                 <span class="comment">//</span>
                 这里是极北的个人主页</p>
         </div>
-        <div class="scrollDown"></div>
+        <a class="scrollDown" href="#aboutMe"></a>
     </section>
     <section class="aboutMe">
+        <a id="aboutMe" class="point"></a>
         <h3 class="me-title">关于我</h3>
         <span class="me-underline"></span>
         <div class="aboutMe-cardbox">
@@ -37,6 +40,7 @@
         <p class="aboutMe-content">请多多指教</p>
     </section>
     <section class="myWork">
+        <a id="myWork" class="point"></a>
         <h3 class="me-title">我的作品</h3>
         <span class="me-underline"></span>
         <div class="works">
@@ -70,5 +74,32 @@
             </div>
         </div>
     </section>
+    <footer class="foot">
+        <div class="footbox">
+            <p>友情链接</p>
+            <a href="https://github.com/xunyegege" target="_blank">Gavin</a>
+            <a href="https://evanyou.me/" target="_blank">Evan You</a>
+            <a href="https://github.com/Linn924" target="_blank">Simon</a>
+        </div>
+        <div class="footbox">
+            <p>与我联系</p>
+            <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=kKGgoqOgpaSgpKPQ4eG_8--9" style="text-decoration:none;">我的邮箱</a>
+            <a href="https://steamcommunity.com/profiles/76561198294539744/" target="_blank">Steam</a>
+        </div>
+        <div class="footbox">
+            <p>© 2020 张汝超</p>
+            <a href="http://www.beian.miit.gov.cn/" target="_blank">苏ICP备20006657号</a>
+        </div>
+    </footer>
+    <nav class="mobileNav">
+        <div class="nav-iconbox">
+            <div class="nav-icon"></div>
+        </div>
+        <a href="#title">首页</a>
+        <a href="#aboutMe">关于我</a>
+        <a href="#myWork">我的作品</a>
+    </nav>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
