@@ -269,7 +269,8 @@ section{
     z-index: 3;
     opacity: 0;
     visibility: hidden;
-    translate: opacity .3s;
+    transition: opacity .3s linear,
+                visibility 0s linear 0.2s;
     position: fixed;
     top: 0;
     left: 0;
