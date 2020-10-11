@@ -20,8 +20,14 @@ section .point {
   position: absolute;
   top: 0;
 }
+@media screen and (min-width: 1200px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
 .background {
-  background-image: url(../images/macOS-Big-Sur-Daylight.jpg);
+  background-image: url(../images/macOS-Big-Sur-Daylight.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -42,6 +48,37 @@ section .point {
   justify-content: flex-end;
   z-index: 2;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+}
+.header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 2rem;
+  display: none;
+  position: relative;
+}
+.header a::after {
+  content: '';
+  transition: width 0.3s;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: 5px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: white;
+}
+.header a:hover::after {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header a {
+    display: block;
+  }
+  .header .icon {
+    display: none;
+  }
 }
 .header-scroll {
   position: fixed;
@@ -103,14 +140,27 @@ section .point {
 .title .comment {
   color: rgba(255, 255, 255, 0.6);
 }
+@media screen and (min-width: 768px) {
+  .title .title-content {
+    font-size: 2.8125rem;
+  }
+}
 .scrollDown {
   position: absolute;
+  padding: 1rem;
   bottom: 2rem;
+}
+.scrollDown span {
+  display: block;
   width: 1.25rem;
   height: 1.25rem;
   border-right: 0.125rem solid white;
   border-bottom: 0.125rem solid white;
   transform: rotate(45deg);
+}
+.scrollDown:hover span {
+  transition: transform 0.3s;
+  transform: translateY(-50%) rotate(45deg);
 }
 .me-title {
   font-size: 1.875rem;
@@ -121,10 +171,10 @@ section .point {
 .me-underline {
   display: block;
   width: 2.5rem;
-  height: 1.1875rem;
+  height: 0.25rem;
   background-color: #38b7ea;
   margin: 0 auto;
-  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background-clip: content-box;
 }
 .aboutMe {
@@ -147,6 +197,9 @@ section .point {
   text-align: center;
   color: #5a5a5a;
 }
+.aboutMe .aboutMe-content a {
+  color: inherit;
+}
 .myWork {
   background-color: #f5f5f5;
   padding-top: 5rem;
@@ -159,19 +212,30 @@ section .point {
   flex-wrap: wrap;
 }
 .works .workBox {
+  transition: box-shadow 0.3s;
   width: 18.75rem;
   margin: 0 1rem 2rem 1rem;
+  overflow: hidden;
+}
+.works .workBox .imgbox {
+  height: 9.6875rem;
+  overflow: hidden;
+}
+.works .workBox a {
+  text-decoration: none;
+  color: black;
 }
 .works .workBox img {
   width: 100%;
-  height: 9.6875rem;
   display: block;
+  transition: all 0.3s;
 }
 .works .workBox .workBox-content {
   height: 4.375rem;
   background-color: white;
   padding-left: 1rem;
   padding-top: 0.5rem;
+  font-size: 1rem;
 }
 .works .workBox .workBox-content .workBox-content-title {
   line-height: 0;
@@ -179,6 +243,14 @@ section .point {
 }
 .works .workBox .workBox-content .workBox-content-describe {
   font-size: 0.8rem;
+}
+@media screen and (min-width: 992px) {
+  .workBox:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 10px 30px;
+  }
+  .workBox:hover img {
+    transform: scale(1.1);
+  }
 }
 .foot {
   padding-top: 5rem;
@@ -213,6 +285,21 @@ section .point {
   color: #fff;
   font-size: 0.75rem;
   line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .foot {
+    grid-template-columns: repeat(3, 12.5rem);
+    justify-content: center;
+  }
+  .foot .footbox:nth-child(1) {
+    grid-area: auto;
+  }
+  .foot .footbox:nth-child(2) {
+    grid-area: auto;
+  }
+  .foot .footbox:nth-child(3) {
+    grid-area: auto;
+  }
 }
 .mobileNav {
   z-index: 4;

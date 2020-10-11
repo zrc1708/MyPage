@@ -19,8 +19,13 @@ section{
         top: 0;
     }
 }
+@media screen and (min-width: 1200px) {
+    html,body{
+        font-size: 20px;
+    }
+}
 .background{
-    background-image: url(../images/macOS-Big-Sur-Daylight.jpg);
+    background-image: url(../images/macOS-Big-Sur-Daylight.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -41,6 +46,42 @@ section{
     justify-content: flex-end;
     z-index: 2;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.4),transparent);
+
+    a{
+        color: white;
+        text-decoration: none;
+        margin: 0 2rem;
+        display: none;
+        position: relative;
+        &::after{
+            content: '';
+            transition: width .3s;
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-top: 5px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+        &:hover{
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .header{
+        a{
+            display: block;
+        }
+        .icon{
+            display: none;
+        }
+    }
 }
 .header-scroll{
     position: fixed;
@@ -106,14 +147,30 @@ section{
         color: rgba(255,255,255,0.6);
     }
 }
+@media screen and (min-width: 768px) {
+    .title{
+        .title-content{
+            font-size: 45 / 16rem;
+        }
+    }
+}
 .scrollDown{
     position: absolute;
+    padding: 1rem;
     bottom: 2rem;
-    width: 20 / 16rem;
-    height: 20 / 16rem;
-    border-right: 2 / 16rem solid white;
-    border-bottom: 2 / 16rem solid white;
-    transform: rotate(45deg);
+
+    span{
+        display: block;
+        width: 20 / 16rem;
+        height: 20 / 16rem;
+        border-right: 2 / 16rem solid white;
+        border-bottom: 2 / 16rem solid white;
+        transform: rotate(45deg);
+    }
+    &:hover span{
+        transition: transform .3s;
+        transform: translateY(-50%) rotate(45deg);
+    }
 }
 .me-title{
     font-size: 30 / 16rem;
@@ -124,10 +181,10 @@ section{
 .me-underline{
     display: block;
     width: 40 / 16rem;
-    height: 19 / 16rem;
+    height: 4 / 16rem;
     background-color: #38b7ea;
     margin: 0 auto;
-    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
     background-clip: content-box;
 }
 .aboutMe{
@@ -149,6 +206,9 @@ section{
     .aboutMe-content{
         text-align: center;
         color: #5a5a5a;
+        a{
+            color: inherit;
+        }
     }
 }
 .myWork{
@@ -161,20 +221,32 @@ section{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
     .workBox{
+        transition: box-shadow .3s;
         width: 300 / 16rem;
         margin: 0 1rem 2rem 1rem;
+        overflow: hidden;
 
+        .imgbox{
+            height: 155 / 16rem;
+            overflow: hidden;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
         img{
             width: 100%;
-            height: 155 / 16rem;
             display: block;
+            transition: all .3s;
         }
         .workBox-content{
             height: 70 / 16rem;
             background-color: white;
             padding-left: 1rem;
             padding-top: .5rem;
+            font-size: 1rem;
 
             .workBox-content-title{
                 line-height: 0;
@@ -182,6 +254,17 @@ section{
             }
             .workBox-content-describe{
                 font-size: .8rem;
+            }
+        }
+    }
+}
+// 中等屏幕，添加悬浮特效
+@media screen and (min-width: 992px) {
+    .workBox{
+        &:hover{
+            box-shadow: rgba(0,0,0,.2) 0 10px 30px;
+            img{
+                transform: scale(1.1);
             }
         }
     }
@@ -220,6 +303,21 @@ section{
         color: #fff;
         font-size: 12 / 16rem;
         line-height: 20 / 16rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .foot{
+        grid-template-columns: repeat(3,max(200 / 16rem));
+        justify-content: center;
+        .footbox:nth-child(1){
+            grid-area: auto;
+        }
+        .footbox:nth-child(2){
+            grid-area: auto;
+        }
+        .footbox:nth-child(3){
+            grid-area: auto;
+        }
     }
 }
 .mobileNav{

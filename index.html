@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>极北的个人空间</title>
+    <!-- <link rel="icon" href="./favicon.ico"> -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css//normalize.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -11,6 +13,9 @@
     <div class="background"></div>
     <div class="mask"></div>
     <header class="header">
+        <a href="#title">首页</a>
+        <a href="#aboutMe">关于我</a>
+        <a href="#myWork">我的作品</a>
         <div class="icon"></div>
     </header>
     <section class="title">
@@ -22,7 +27,9 @@
                 <span class="comment">//</span>
                 这里是极北的个人主页</p>
         </div>
-        <a class="scrollDown" href="#aboutMe"></a>
+        <a class="scrollDown" href="#aboutMe">
+            <span></span>
+        </a>
     </section>
     <section class="aboutMe">
         <a id="aboutMe" class="point"></a>
@@ -36,7 +43,7 @@
         <p class="aboutMe-content">我是张汝超</p>
         <p class="aboutMe-content">一名大四学生，主攻前端开发</p>
         <p class="aboutMe-content">单机游戏爱好者</p>
-        <p class="aboutMe-content">更多精彩，敬请移步GitHub</p>
+        <p class="aboutMe-content">更多精彩，敬请移步<a href="https://github.com/zrc1708" target="_blank">GitHub</a></p>
         <p class="aboutMe-content">请多多指教</p>
     </section>
     <section class="myWork">
@@ -45,32 +52,48 @@
         <span class="me-underline"></span>
         <div class="works">
             <div class="workBox">
-                <img src="./images/me-nicoui.png" alt="">
-                <div class="workBox-content">
-                    <p class="workBox-content-title">nicoUI</p>
-                    <p class="workBox-content-describe">一套基于Vue.js的UI组件库</p>
-                </div>
+                <a href="http://nicoui.jibei66.com" target="_blank">
+                    <div class="imgbox">
+                        <img src="./images/me-nicoui.webp" alt="">
+                    </div>
+                    <div class="workBox-content">
+                        <p class="workBox-content-title">nicoUI</p>
+                        <p class="workBox-content-describe">一套基于Vue.js的UI组件库</p>
+                    </div>
+                </a>
             </div>
             <div class="workBox">
-                <img src="./images/me-nicoimg.png" alt="">
-                <div class="workBox-content">
-                    <p class="workBox-content-title">妮可图床</p>
-                    <p class="workBox-content-describe">自用的图床并对外开放了api</p>
-                </div>
+                <a href="http://img.jibei66.com"  target="_blank">
+                    <div class="imgbox">
+                        <img src="./images/me-nicoimg.webp" alt="">
+                    </div>
+                    <div class="workBox-content">
+                        <p class="workBox-content-title">妮可图床</p>
+                        <p class="workBox-content-describe">自用的图床并对外开放了api</p>
+                    </div>
+                </a>
             </div>
             <div class="workBox">
-                <img src="./images/me-bigjibei.jpg" alt="">
-                <div class="workBox-content">
-                    <p class="workBox-content-title">个人博客</p>
-                    <p class="workBox-content-describe">自己搭建的博客站点</p>
-                </div>
+                <a href="http://blog.jibei66.com"  target="_blank">
+                    <div class="imgbox">
+                        <img src="./images/me-bigjibei.webp" alt="">
+                    </div>
+                    <div class="workBox-content">
+                        <p class="workBox-content-title">个人博客</p>
+                        <p class="workBox-content-describe">自己搭建的博客站点</p>
+                    </div>
+                </a>
             </div>
             <div class="workBox">
-                <img src="./images/me-nicopan.jpg" alt="">
-                <div class="workBox-content">
-                    <p class="workBox-content-title">妮可网盘</p>
-                    <p class="workBox-content-describe">百度网盘不好用就自己整一个呗</p>
-                </div>
+                <a href="http://pan.jibei66.com"  target="_blank">
+                    <div class="imgbox">
+                        <img src="./images/me-nicopan.webp" alt="">
+                    </div>
+                    <div class="workBox-content">
+                        <p class="workBox-content-title">妮可网盘</p>
+                        <p class="workBox-content-describe">百度网盘不好用就自己整一个呗</p>
+                    </div>
+                </a>    
             </div>
         </div>
     </section>
