@@ -1,3 +1,8 @@
+import smoothscroll from 'smoothscroll-polyfill';
+import '../css/normalize.css'
+import '../css/index.less'
+
+smoothscroll.polyfill();
 // 节流
 function throttle(fun,time){
     let lasttime = 0
